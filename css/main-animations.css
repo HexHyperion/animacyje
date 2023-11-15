@@ -1,0 +1,286 @@
+.mainpage-animation-1, .mainpage-animation-2, .mainpage-animation-3 {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Animacja 1 - Kropki */
+
+.mainpage-animation-1 {
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.simple-loading-1 {
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: simple-loading-1 infinite 1.3s linear;
+}
+
+#dot2{
+    z-index: 10;
+}
+
+.simple-loading-1 img {
+    height: 1px;
+}
+
+#dot2 {
+    animation-delay: .2s;
+}
+
+#dot3 {
+    animation-delay: .4s;
+}
+
+/* Animacja 2 - Koło */
+
+.mainpage-animation-2 {
+
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.simple-loading-2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /* border-bottom: 10px grey solid;
+    border-left: 10px grey solid;
+    border-right: 10px grey solid; */
+    border-bottom: 10px darkorchid solid;
+    border-left: 10px cyan solid;
+    border-right: 10px gold solid;
+    border-top: 10px black solid;
+    animation: simple-loading-2 infinite 1s linear(-0.18 10.44%, 2.5 105.88%) normal;
+    background: linear-gradient(170deg, rgb(191, 255, 0) 0%, rgb(116, 82, 122)50%, rgb(68, 255, 0)100%) #313949;
+    z-index: -1;
+}
+
+/* .simple-loading-2:hover {
+    animation-direction: reverse;
+} */
+
+/* Animacja 3 - Kwadrat */
+
+.mainpage-animation-3 {
+    box-sizing: content-box;
+    border: 2px solid black;
+    transition: 1s;
+    position: relative;
+    border-radius: 6px;
+}
+.hover-stop-start {
+    height: 20px;
+    width: 20px;
+    background: #000;
+    animation: stop-start infinite 6s linear(-0.18 90.44%, 2.5 105.88%);
+    animation-play-state: running;
+    z-index: 100;
+    border-radius: 4px;
+
+}
+
+.mainpage-animation-3:hover {
+    /* background-color: gainsboro; */
+    transition: 1s;
+}
+
+
+.mainpage-animation-3:hover span {
+    color: transparent;
+    transition: .5s;
+}
+
+.mainpage-animation-3:hover .hover-stop-start {
+    animation-play-state: running;
+}
+.hover-stop-start-span {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    transition: .5s;
+    font-size: 4em;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+body{
+    animation: bodi 1s infinite linear;
+    animation: bodi2 62s infinite linear;
+    animation-play-state: paused;
+}
+
+body:hover{
+    animation-play-state: running;
+}
+
+main{
+    animation: rogi 2s infinite linear;
+}
+
+.mainpage-animation-2{
+    animation: roty 5s infinite ease-in;
+    scale: 6;
+}
+
+.mainpage-animation-2:hover{
+    transform: translate(0,-1000px);
+    transition: 10s;
+}
+
+p::after{
+    font-size: 0.015em;
+    content: "i wanna die";
+    position: relative;
+    top: -60px;
+    right: 100px;
+}
+
+
+@keyframes simple-loading-1 {
+    0% {
+        scale: 20;
+    }
+
+    50% {
+        scale: 0.5;
+
+    }
+
+    100% {
+        scale: 30;
+    }
+
+}
+
+@keyframes simple-loading-2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    15% {
+        transform: rotate(40deg);
+    }
+
+    85% {
+        transform: rotate(320deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+@keyframes stop-start {
+    0% {
+        transform: translate(0,0);
+        transform:rotate(0deg);
+    }
+    13.5% {
+        transform: translate(80px, 0px);
+        transform:rotate(180deg);
+    }
+    27% {        
+        transform: translate(80px,80px);
+        transform:rotate(270deg);
+    }
+    50% {        
+        transform: translate(0px,0px);
+        transform:rotate(360deg);
+    }
+    63.5% {
+        transform: translate(0px,80px);
+
+    }
+    77% {        
+        transform: translate(80px,80px);
+    }
+    100% {
+        transform: translate(0,0);
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes bodi {
+    0%{
+        background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+    }
+    15%{
+        background: linear-gradient(220deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+    }
+    30%{
+        background: linear-gradient(275deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+    }
+    45%{
+        background: linear-gradient(340deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+    }
+    60%{
+        background: linear-gradient(10deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+    }
+    80%{
+        background: linear-gradient(80deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+    }
+    100%{
+        background: linear-gradient(135deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+    }
+}
+
+@keyframes rogi {
+    0%{
+        border-radius: 0 20px 50% 0;
+        background-color: #ff00ff;
+    }
+    25%{
+        border-radius: 0 50% 100px 20%;
+    }
+    50%{
+        border-radius: 40px 20px 50px 80%;
+        background-color: #00ff00;
+    }
+    75%{
+        border-radius: 50% 20px 5px 0;
+    }
+    100%{
+        border-radius: 0 20px 50% 0;
+    }
+}
+
+@keyframes roty {
+    0%{
+        transform: rotateY(0deg);
+        transform: translate(0,350px)
+    }
+    25%{
+        transform: translate(100px,0);
+    }
+    50%{
+        transform: translate(0,350px);
+    }
+    75%{
+        transform: translate(-50px,-100px);
+    }
+    100%{
+        transform: rotateY(360deg);
+        transform: translate(0,350px);
+    }
+}
+
+@keyframes bodi2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,34 @@
+@import url("reset.css");
+@import url("fonts.css");
+
+:root {
+--main-bg-color: rgba(255, 255, 255, .8);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    /* background: gainsboro; */
+
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+body {
+    background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, rgba(49, 57, 73, 0.5) 20%, rgba(49, 57, 73, 0.5) 35%, rgba(41, 48, 61, 0.6) 35%, rgba(41, 48, 61, 0.8) 45%, rgba(31, 36, 46, 0.5) 45%, rgba(31, 36, 46, 0.8) 75%, rgba(49, 57, 73, 0.5) 75%), linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, rgba(41, 48, 61, 0.8) 50%, rgba(82, 95, 122, 0.8) 50%, rgba(133, 146, 173, 0.8) 100%) #313949;
+}
+
+
+main {
+    height: auto;
+    width: 70%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    background: var(--main-bg-color);
+}
